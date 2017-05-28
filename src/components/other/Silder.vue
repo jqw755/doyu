@@ -1,10 +1,10 @@
 <template>
-  <div class="silder_wrapper">   <!---->
+  <div class="silder_wrapper" >
     <div class="make" @click="hideNav"></div>
     <div class="nav">
       <ul>
-        <li v-for="m in menu">
-          <router-link :to=m.url>
+        <li v-for="m in menu" @click="hideNav">
+          <router-link :to="'/'+m.url">
             <span>{{m.title}}</span><i class="icon-arrow_right"></i>
           </router-link>
         </li>
@@ -16,13 +16,14 @@
 <script>
   import {bus} from '../../utils/bus'
 
+
   export default {
     data() {
       return {
         menu: [
           {
             title: '首页',
-            url: ''
+            url: 'home'
           },
           {
             title: '分类',
@@ -56,13 +57,14 @@
     height: 100%;
     position: fixed;
     left: 0;
+    top:0;
     z-index: 100;
     transition: all ease .4s;
     -webkit-transition: all ease .4s;
   }
 
   .make {
-    margin-top: 50px;
+    top: 3rem;
     z-index: 99;
     background: rgba(0, 0, 0, 0.6);
   }
@@ -73,12 +75,12 @@
     background: #282828;
     position: absolute;
     display: block;
-    top: 50px;
-    right: 110px;
-    bottom: 0;
+    top:3rem;
+    right: 6rem;
+    bottom:0;
     left: 0;
-    transition: right .4s ease;
-    -webkit-transition: right .4s ease;
+    transition: all .4s ease;
+    -webkit-transition: all .4s ease;
     z-index: 101;
   }
 
@@ -88,7 +90,7 @@
 
   .nav li a {
     color: #9a9a9a;
-    font-size: 14px;
+    font-size: 0.8rem;
     font-weight: 600;
     display: flex;
     border-bottom: 1px dotted #333;
@@ -98,13 +100,13 @@
   .nav li span {
     flex: 1;
     text-align: left;
-    padding: 15px 18px;
+    padding: 0.9rem 1.1rem;
   }
 
   .nav li i {
     flex: 1;
     text-align: right;
-    padding: 15px 18px;
+    padding: 0.9rem 1.1rem;
   }
 
   .nav li i:before {

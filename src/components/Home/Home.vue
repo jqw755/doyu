@@ -1,13 +1,15 @@
 <template>
   <div class="container">
-    <div class="live_item" v-for="item in data">
-      <live_item :rooms="rooms"></live_item>
+    <div class="live_item">
+      <live_item :rooms="data.data"></live_item>
     </div>
+
   </div>
 </template>
 
 <script>
   import live_item from './LiveItem'
+  import img_item from './ImgItem'
 
   export default {
     data() {
@@ -18,36 +20,38 @@
     },
     components: {
       live_item,
+      img_item
     },
     methods: {
       getIndexLive(){
         const self = this;
-        self.limit += 20;
+        self.limit = self.limit + 20;
         if (self.limit > 100) {
-          return false;
+          return false
         }
-        let successCall = (data) => {
-          console.log(data)
-
-          self.data = data.body.data;
-
-
+        let successCallback = (res) => {
+          if (res.data.error === 0) {
+            self.data = res.data;
+          }
         }
-        let errorCall = (data) => {
-          console.log(data)
+        let errorCallback = (res) => {
+          console.log(res)
         }
-
-
-        self.$http.get('/api/live?limit=' + self.limit).then(successCall, errorCall)
-      }
+        self.$http.get('/api/live?limit=' + self.limit).then(successCallback, errorCallback)
+      },
     },
     mounted(){
-      this.getIndexLive()
+      this.getIndexLive();
     },
   }
 </script>
 
 <style>
-
+.container{
+  width: 100%;
+  height: 100%;
+  margin-bottom:2rem;
+  margin-top: 3rem;
+}
 
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <head_nav></head_nav>
+    <head_nav :title="title"></head_nav>
     <silder v-show='show'></silder>
     <router-view></router-view>
   </div>
@@ -13,7 +13,8 @@
   export default {
     data() {
       return {
-        show: false
+        show: false,
+        title: ''
       }
     },
     components: {
@@ -27,11 +28,16 @@
       bus.$on('hideNav', (msg) => {
         this.show = msg;
       });
-
     },
-    methods: {
+    methods: {},
+    watch: {
+      '$route' (to) {
+        if (to.path === '/home' ||to.path === '/' ) {
+          this.title = '--精彩直播';
 
-    }
+        }
+      }
+    },
   }
 </script>
 
