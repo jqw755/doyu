@@ -1,14 +1,16 @@
 <template>
   <div class="item">
-    <div class="room_src">
-      <img_item :src="room.room_src"></img_item>
-      <div class="room_info">
-        <p class="room-nickname">{{room.nickname}}</p>
-        <p class="room-online">
-          <span class="online-span">{{room.online | formatWaatch}}</span>
-        </p>
+    <router-link :to="`/room/id=` + room.room_id">
+      <div class="room_src">
+        <img_item :src="room.room_src"></img_item>
+        <div class="room_info">
+          <p class="room-nickname">{{room.nickname}}</p>
+          <p class="room-online">
+            <span class="online-span">{{room.online | formatWaatch}}</span>
+          </p>
+        </div>
       </div>
-    </div>
+    </router-link>
     <div class="room-name">{{room.room_name}}</div>
   </div>
 </template>
@@ -23,13 +25,16 @@
       return {}
     },
     components: {
-      img_item,
+      img_item
     },
     filters: {
       formatWaatch(w){
         if (w < 10000) {return w}
         return (w / 10000).toFixed(1) + "万"
       }
+    },
+    mounted() {
+
     }
   }
 </script>

@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <head_nav :title="title"></head_nav>
-    <silder v-show='show'></silder>
+    <silder :class="{'showSilser':show}"></silder>
     <router-view></router-view>
   </div>
 </template>
@@ -66,4 +66,8 @@
     display: inline-block;
   }
 
+  .showSilser{
+    transform:translate(0,0) !important;
+    -weblit-transform:translate(0,0) !important;
+  }
 </style>

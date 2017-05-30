@@ -1,9 +1,8 @@
 <template>
-  <div class="silder_wrapper" >
-    <div class="make" @click="hideNav"></div>
+  <div class="silder_wrapper" @click="hideNav">
     <div class="nav">
       <ul>
-        <li v-for="m in menu" @click="hideNav">
+        <li v-for="m in menu">
           <router-link :to="'/'+m.url">
             <span>{{m.title}}</span><i class="icon-arrow_right"></i>
           </router-link>
@@ -59,14 +58,11 @@
     left: 0;
     top:0;
     z-index: 100;
-    transition: all ease .4s;
-    -webkit-transition: all ease .4s;
-  }
-
-  .make {
-    top: 3rem;
-    z-index: 99;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.4);
+    transition: all ease .3s;
+    -webkit-transition: all ease .3s;
+    transform: translate(-100%,0);
+    -webkit-transform: translate(-100%,0);
   }
 
   .nav {
@@ -79,13 +75,9 @@
     right: 6rem;
     bottom:0;
     left: 0;
-    transition: all .4s ease;
-    -webkit-transition: all .4s ease;
+    transition: all .3s ease;
+    -webkit-transition: all .3s ease;
     z-index: 101;
-  }
-
-  .nav li {
-
   }
 
   .nav li a {
