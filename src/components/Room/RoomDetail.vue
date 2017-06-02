@@ -10,7 +10,7 @@
       </div>
       <div class="status">
         <small v-show="roomInfo.room_status == 1 ? true : false">最近开播时间:{{roomInfo.start_time}}</small>
-        <p v-show="roomInfo.room_status == 2 ? true : false">主播当前不在线呢,去看看其他主播吧~</p>
+        <p v-show="roomInfo.room_status == 2 ? true : false">不在线呢,去看看其他主播吧~</p>
       </div>
     </section>
 
@@ -31,8 +31,8 @@
     </section>
 
     <section class="foot">
-    <img src="../../assets/Room/develop.jpg" class="developing">
-    <p>嘤嘤嘤~待开发...</p>
+      <img src="../../assets/Room/develop.jpg" class="developing">
+      <p>嘤嘤嘤~待开发...</p>
     </section>
   </div>
 </template>
@@ -51,15 +51,15 @@
     },
     methods: {
       focus(){
-        this.v_info = '关注成功';
-        if (this.show_tip === false) {
-          this.show_tip = true;
-          console.log(this.show_tip)
+        const self = this;
+        self.v_info = '关注成功';
+        if (self.show_tip === false) {
+          self.show_tip = true;
+          setTimeout(function () {
+            self.show_tip = false;
+          }, 2500);
         }
-        setTimeout(function () {
-          this.show_tip = false;
-          console.log(this.show_tip)
-        }, 2500);
+
       },
     },
     filters: {
@@ -206,15 +206,42 @@
     position: absolute;
     left: 50%;
     bottom: 0;
-    -webkit-transform: translate(-50%, 0);
-    transform: translate(-50%, 0);
+    opacity: 0;
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
   }
 
   .tip_tran {
-    transform: translate(-50%, -3rem);
-    -webkit-transform: translate(-50%, -3rem);
+    -webkit-animation: tip_ani 0.6s;
+    animation: tip_ani 0.6s;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+  }
+
+  @keyframes tip_ani {
+    from {
+      opacity: 0;
+      transform: translate(-50%, 0);
+      -webkit-transform: translate(-50%, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate(-50%, -3.5rem);
+      -webkit-transform: translate(-50%, -3.5rem);
+    }
+  }
+
+  @-webkit-keyframes tip_ani {
+    from {
+      opacity: 0;
+      transform: translate(-50%, 0);
+      -webkit-transform: translate(-50%, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate(-50%, -3.5rem);
+      -webkit-transform: translate(-50%, -3.5rem);
+    }
   }
 
   .foot {

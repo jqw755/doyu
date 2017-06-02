@@ -32,9 +32,8 @@
     methods: {},
     watch: {
       '$route' (to) {
-        if (to.path === '/home' ||to.path === '/' ) {
+        if (to.path === '/home') {
           this.title = '--精彩直播';
-
         }
       }
     },
