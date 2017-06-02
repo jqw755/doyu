@@ -30,10 +30,10 @@
       <div :class="[{tip_tran:show_tip},'tip']" v-show="show_tip">{{v_info}}</div>
     </section>
 
-    <!--<section class="foot">-->
-    <!--<img src="../../assets/Room/develop.jpg" class="developing">-->
-    <!--<p>嘤嘤嘤~待开发...</p>-->
-    <!--</section>-->
+    <section class="foot">
+    <img src="../../assets/Room/develop.jpg" class="developing">
+    <p>嘤嘤嘤~待开发...</p>
+    </section>
   </div>
 </template>
 

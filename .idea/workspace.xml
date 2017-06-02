@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fca54de5-e5ab-405b-8416-814dd620f768" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Room/develop.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Room/hd-focus.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Room/hd-send.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Room/hd-share.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Room/RoomDetail.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/utils/Utils.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Home/HotItem.vue" afterPath="$PROJECT_DIR$/src/components/Home/HotItem.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Home/LiveItem.vue" afterPath="$PROJECT_DIR$/src/components/Home/LiveItem.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Room/Room.vue" afterPath="$PROJECT_DIR$/src/components/Room/Room.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Room/RoomDetail.vue" afterPath="$PROJECT_DIR$/src/components/Room/RoomDetail.vue" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -42,8 +33,8 @@
       <file leaf-file-name="RoomDetail.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/Room/RoomDetail.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="464">
-              <caret line="117" column="24" lean-forward="true" selection-start-line="117" selection-start-column="24" selection-end-line="117" selection-end-column="24" />
+            <state relative-caret-position="419">
+              <caret line="32" column="3" lean-forward="false" selection-start-line="32" selection-start-column="3" selection-end-line="35" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -403,12 +394,12 @@
       <workItem from="1495946550579" duration="17381000" />
       <workItem from="1496138528310" duration="4728000" />
       <workItem from="1496195351928" duration="1090000" />
-      <workItem from="1496386469280" duration="12953000" />
+      <workItem from="1496386469280" duration="13011000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58323000" />
+    <option name="totallyTimeSpent" value="58381000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -793,8 +784,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Room/RoomDetail.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="117" column="24" lean-forward="true" selection-start-line="117" selection-start-column="24" selection-end-line="117" selection-end-column="24" />
+        <state relative-caret-position="419">
+          <caret line="32" column="3" lean-forward="false" selection-start-line="32" selection-start-column="3" selection-end-line="35" selection-end-column="14" />
           <folding />
         </state>
       </provider>
