@@ -1,7 +1,6 @@
 <template>
   <div class="item_container">
-    <p>精彩直播</p>
-    <hot_item v-for="room in rooms" :room="room"></hot_item>
+    <hot_item v-for="room in rooms" :room="room" :key = "room.id"></hot_item>
   </div>
 </template>
 

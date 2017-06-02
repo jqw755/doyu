@@ -1,13 +1,17 @@
 <template>
-  <p>123</p>
+  <roomDetail :roomInfo="data"></roomDetail>
 </template>
 
 <script>
+  import roomDetail from './RoomDetail'
   export default{
     data(){
       return {
         data: {},
       }
+    },
+    components:{
+      roomDetail,
     },
     methods: {
       getId(params){
@@ -19,7 +23,7 @@
         const self = this;
         let succeClaaB = (res) => {
           if (res.data.error === 0) {
-//            self.data = res.data;
+            self.data = res.body.data;
             console.log(res)
           }
         };
@@ -31,7 +35,6 @@
     },
     mounted() {
       this.getRoomDetail();
-
     }
   }
 </script>

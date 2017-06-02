@@ -6,7 +6,7 @@
         <div class="room_info">
           <p class="room-nickname">{{room.nickname}}</p>
           <p class="room-online">
-            <span class="online-span">{{room.online | formatWaatch}}</span>
+            <span class="online-span">{{room.online | formatWacth}}</span>
           </p>
         </div>
       </div>
@@ -17,6 +17,7 @@
 
 <script>
   import img_item from './ImgItem'
+  import Utils from '../../utils/Utils'
   export default {
     props: {
       room: {}
@@ -28,9 +29,8 @@
       img_item
     },
     filters: {
-      formatWaatch(w){
-        if (w < 10000) {return w}
-        return (w / 10000).toFixed(1) + "万"
+      formatWacth(w){
+        return Utils.formatWatch(w);
       }
     },
     mounted() {
@@ -126,7 +126,7 @@
     margin:auto 0;
     position: absolute;
     left: -1rem;
-    top: .22rem;
+    top: .1rem;
   }
 
   .room-name {
