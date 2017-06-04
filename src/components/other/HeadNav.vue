@@ -4,7 +4,10 @@
       <div class="menu_icon"></div>
     </div>
     <div class="title">
-      <h4>LIVE<span>{{title}}</span></h4>
+      <h4>LIVE</h4>
+    </div>
+    <div class="title_span">
+      <span>欢迎{{title}}</span>
     </div>
   </div>
 </template>
@@ -66,5 +69,14 @@
     white-space: nowrap;
   }
 
+  .title_span {
+    flex: 1;
+    height:3rem;
+    line-height:3rem;
+    color: #fff;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
 
 </style>

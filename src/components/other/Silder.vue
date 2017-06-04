@@ -32,7 +32,7 @@
           },
           {
             title: '个人中心',
-            url: ''
+            url: '/login'
           },
         ],
         show: false,
