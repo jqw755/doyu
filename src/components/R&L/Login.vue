@@ -56,7 +56,7 @@
         }
         sessionStorage.setItem('account', acc.value);
         sessionStorage.setItem('pwd', pwd_ipt.value);
-        this.focus('登陆成功，即将跳转到首页');
+        this.focus('登陆成功,即将跳转到首页');
         setTimeout(function () {
             window.location = '/home';
 //          console.log(this.$route)
