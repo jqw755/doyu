@@ -7,7 +7,9 @@
       <h4>LIVE</h4>
     </div>
     <div class="title_span">
-      <span>欢迎{{title}}</span>
+      <router-link to="/login">
+        <span>{{title}}</span>
+      </router-link>
     </div>
   </div>
 </template>
