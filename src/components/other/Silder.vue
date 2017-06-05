@@ -3,7 +3,7 @@
     <div class="nav">
       <ul>
         <li v-for="m in menu">
-          <router-link :to="'/'+m.url">
+          <router-link :to="m.url">
             <span>{{m.title}}</span><i class="icon-arrow_right"></i>
           </router-link>
         </li>
@@ -14,15 +14,13 @@
 
 <script>
   import {bus} from '../../utils/bus'
-
-
   export default {
     data() {
       return {
         menu: [
           {
             title: '首页',
-            url: 'home'
+            url: '/home'
           },
           {
             title: '分类',
@@ -30,11 +28,11 @@
           },
           {
             title: '推荐',
-            url: ''
+            url: '/recommoned'
           },
           {
             title: '个人中心',
-            url: ''
+            url: '/login'
           },
         ],
         show: false,

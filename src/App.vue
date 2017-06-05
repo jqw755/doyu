@@ -13,6 +13,7 @@
   export default {
     data() {
       return {
+        user: '',
         show: false,
         title: ''
       }
@@ -22,6 +23,10 @@
       silder,
     },
     mounted() {
+      const userName = sessionStorage.getItem('account');
+      if (userName !== '') {
+        this.title = userName;
+      }
       bus.$on('showNav', (msg) => {
         this.show = msg;
       });
@@ -31,12 +36,11 @@
     },
     methods: {},
     watch: {
-      '$route' (to) {
-        if (to.path === '/home' ||to.path === '/' ) {
-          this.title = '--精彩直播';
-
-        }
-      }
+//      '$route' (to) {
+//        if (to.path === '/home') {
+//          this.title = '--精彩直播';
+//        }
+//      }
     },
   }
 </script>
@@ -66,8 +70,8 @@
     display: inline-block;
   }
 
-  .showSilser{
-    transform:translate(0,0) !important;
-    -weblit-transform:translate(0,0) !important;
+  .showSilser {
+    transform: translate(0, 0) !important;
+    -weblit-transform: translate(0, 0) !important;
   }
 </style>
