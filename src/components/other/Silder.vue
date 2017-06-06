@@ -24,7 +24,7 @@
           },
           {
             title: '分类',
-            url: ''
+            url: '/game'
           },
           {
             title: '推荐',

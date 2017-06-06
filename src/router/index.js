@@ -4,6 +4,7 @@ import Home from '../components/Home/Home.vue'
 import Room from '../components/Room/Room.vue'
 import Recommoned from '../components/other/Recoommend.vue'
 import Login from '../components/R&L/Login.vue'
+import Game from '../components/classify/Game.vue'
 
 Vue.use(Router)
 
@@ -17,6 +18,10 @@ export default new Router({
     {
       path: '/room/:id',
       component: Room
+    },
+    {
+      path: '/game',
+      component: Game
     },
     {
       path: '/recommoned',

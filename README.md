@@ -1,21 +1,16 @@
-# live
-
+LIVE
 > a live-video for vue
 
-## Build Setup
-
-``` bash
-# install dependencies
 npm install
 
-# serve with hot reload at localhost:8080
+serve with hot reload at localhost:8082
 npm run dev
 
-# build for production with minification
-npm run build
+=================
+谁在黄金海岸
 
-# build for production and view the bundle analyzer report
-npm run build --report
-```
+谁在烽烟彼岸
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+你我在回望那一刹
+
+彼此慰问境况

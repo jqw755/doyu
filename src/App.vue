@@ -72,6 +72,6 @@
 
   .showSilser {
     transform: translate(0, 0) !important;
-    -weblit-transform: translate(0, 0) !important;
+    -webkit-transform: translate(0, 0) !important;
   }
 </style>
