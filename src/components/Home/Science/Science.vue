@@ -1,0 +1,55 @@
+<template>
+  <div class="science_container">
+    <column_title :info='info'></column_title>
+    <hot_item v-for="room in rooms" :room="room" :key="room.id"></hot_item>
+  </div>
+</template>
+
+<script>
+  import hot_item from '../Now/HotItem'
+  import column_title from '../ColumnTitle/column_title'
+  import science from '../../../assets/Home/science.png'
+  import more from '../../../assets/Home/more.png'
+
+  export default {
+    data() {
+      return {
+        rooms: [],
+        limit: 0,
+        info: {
+          src1: science,
+          name: '数码科技',
+          more: '更多',
+          src2: more,
+          link:'smkj'
+        }
+      }
+    },
+    components: {
+      hot_item,
+      column_title,
+    },
+    methods: {
+      getIndexLive(){
+        const self = this;
+        self.limit = self.limit + 4;
+        let success = (res) => {
+          if (res.data.error === 0) {
+            self.rooms = res.body.data;
+          }
+        };
+        let error = (res) => {
+          console.log(res);
+        };
+        self.$http.get('/api/live/smkj?limit=' + self.limit).then(success, error);
+      },
+    },
+    mounted(){
+      this.getIndexLive();
+    },
+  }
+</script>
+
+<style>
+
+</style>

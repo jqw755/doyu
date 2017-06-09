@@ -10,6 +10,7 @@
     data() {
       return {
         data: [],
+        loading:false,
       }
     },
     methods: {
@@ -27,6 +28,7 @@
       },
     },
     mounted(){
+      this.loading = false;
       this.getAllClassify();
     },
     components: {

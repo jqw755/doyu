@@ -20,7 +20,7 @@
 
 <style>
   .che {
-    margin-top:3rem;
+    margin-top: 3rem;
     text-align: center;
   }
 </style>

@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '../components/Home/Home.vue'
+import All from '../components/Home/Now/All.vue'
 import Room from '../components/Room/Room.vue'
 import Recommoned from '../components/Other/Recoommend.vue'
 import Login from '../components/R&L/Login.vue'
@@ -27,6 +28,10 @@ export default new Router({
     {
       path: '/classifyDetail',
       component: ClassifyDetail
+    },
+    {
+      path: '/all',
+      component: All
     },
     {
       path: '/recommoned',
