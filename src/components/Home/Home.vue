@@ -26,9 +26,9 @@
       getIndexLive(){
         const self = this;
         self.limit = self.limit + 20;
-        if (self.limit > 100) {
-          return false
-        }
+//        if (self.limit > 100) {
+//          return false
+//        }
         let successCallback = (res) => {
           if (res.data.error === 0) {
             self.data = res.data;

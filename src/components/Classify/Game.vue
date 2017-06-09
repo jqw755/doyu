@@ -16,10 +16,9 @@
       getAllClassify(){
         const self = this;
         let successCall = (res) => {
-//          if (res.body.error !== 0) {
-//          console.log(res);
-          self.data = res.body.data;
-//          }
+          if (res.body.error === 0) {
+            self.data = res.body.data;
+          }
         };
         let failCall = (res) => {
           console.log(res)

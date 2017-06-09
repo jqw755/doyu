@@ -8,8 +8,8 @@
 
 <script>
   import {bus} from './utils/bus'
-  import head_nav from './components/other/HeadNav'
-  import silder from './components/other/Silder'
+  import head_nav from './components/Other/HeadNav'
+  import silder from './components/Other/Silder'
   export default {
     data() {
       return {

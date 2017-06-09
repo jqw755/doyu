@@ -1,6 +1,6 @@
 <template>
   <div class="classify">
-    <router-link :to="'/'+game.short_name" v-for="game in games" :key="game.id">
+    <router-link :to="'/classifyDetail?flag='+game.short_name" v-for="game in games" :key="game.id">
       <div class="classify_item">
         <img :src="game.game_icon" class="game_icon"/>
         <!--<img :src="game.game_src" :alt="game.short_name" class="game_src"/>-->
@@ -19,9 +19,6 @@
       return {
         data: {}
       }
-    },
-    methods: {},
-    mounted(){
     },
   }
 </script>
