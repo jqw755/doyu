@@ -7,6 +7,7 @@ import Recommoned from '../components/Other/Recoommend.vue'
 import Login from '../components/R&L/Login.vue'
 import Game from '../components/Classify/Game.vue'
 import ClassifyDetail from '../components/Classify/Detail/ClassifyDetail.vue'
+import Banner from '../components/Home/Banner/Banner.vue'
 
 Vue.use(Router)
 

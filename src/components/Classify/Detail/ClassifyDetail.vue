@@ -32,10 +32,11 @@
       },
     },
     mounted(){
-      if (this.$route.query.flag === 'All')
-        this.$router.push('/all');
-      else
-        this.getClassifyDetail();
+      this.getClassifyDetail();
+//      if (this.$route.query.flag === 'All')
+//        this.$router.push('/all');
+//      else
+//        this.getClassifyDetail();
     },
     components: {
       hot_item

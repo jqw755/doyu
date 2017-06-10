@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <banner></banner>
     <live_item></live_item>
     <face_score></face_score>
     <king_glory></king_glory>
@@ -10,6 +11,7 @@
 </template>
 
 <script>
+  import banner from './Banner/Banner'
   import live_item from './Now/LiveItem'
   import face_score from './FaceScore/FaceItem'
   import king_glory from './KingGlory/KingGlory'
@@ -22,6 +24,7 @@
       return {}
     },
     components: {
+      banner,
       live_item,
       face_score,
       king_glory,

@@ -6,6 +6,7 @@
 </template>
 
 <script>
+  import utils from '../../../utils/Utils'
   import hot_item from './HotItem'
   import column_title from '../ColumnTitle/column_title'
   import now from '../../../assets/Home/now.png'
@@ -15,13 +16,13 @@
     data() {
       return {
         rooms: [],
-        limit: 0,
+        limit:0,
         info: {
           src1: now,
           name: '正在直播',
           more: '全部',
           src2: more,
-          link:'All'
+          link: 'All'
         }
       }
     },
@@ -32,31 +33,20 @@
     methods: {
       getIndexLive(){
         const self = this;
-        self.limit = self.limit + 4;
-//        if (self.limit > 100) {
-//          return false
-//        }
-        let successCallback = (res) => {
+        self.limit = self.limit + 6;
+        let success = (res) => {
           if (res.data.error === 0) {
-//              console.log(res)
             self.rooms = res.body.data;
           }
         };
-        let errorCallback = (res) => {
+        let error = (res) => {
           console.log(res);
         };
-        self.$http.get('/api/live?limit=' + self.limit).then(successCallback, errorCallback);
+        self.$http.get('/api/live?limit=' + self.limit).then(success, error);
       },
     },
     mounted(){
-      this.getIndexLive();
+     this.getIndexLive();
     },
   }
 </script>
-
-<style>
-  .now_container {
-    width: 100%;
-  }
-
-</style>
