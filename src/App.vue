@@ -3,24 +3,31 @@
     <head_nav :title="title"></head_nav>
     <silder :class="{'showSilser':show}"></silder>
     <router-view></router-view>
+    <loading v-show="loading"></loading>
   </div>
 </template>
 
 <script>
   import {bus} from './utils/bus'
-  import head_nav from './components/other/HeadNav'
-  import silder from './components/other/Silder'
+  import head_nav from './components/Other/HeadNav'
+  import silder from './components/Other/Silder'
+  import loading from './components/Loading/Loading'
   export default {
     data() {
       return {
         user: '',
         show: false,
-        title: ''
+        title: '',
+        loading: false,
       }
     },
     components: {
       head_nav,
       silder,
+      loading,
+    },
+    beforeCreate(){
+      this.loading = true;
     },
     mounted() {
       const userName = sessionStorage.getItem('account');
@@ -34,7 +41,9 @@
         this.show = msg;
       });
     },
-    methods: {},
+    created(){
+      this.loading = false;
+    },
     watch: {
 //      '$route' (to) {
 //        if (to.path === '/home') {
@@ -72,6 +81,6 @@
 
   .showSilser {
     transform: translate(0, 0) !important;
-    -weblit-transform: translate(0, 0) !important;
+    -webkit-transform: translate(0, 0) !important;
   }
 </style>

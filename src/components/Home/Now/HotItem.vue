@@ -17,7 +17,7 @@
 
 <script>
   import img_item from './ImgItem'
-  import Utils from '../../utils/Utils'
+  import Utils from '../../../utils/Utils'
   export default {
     props: {
       room: {}
@@ -41,7 +41,7 @@
 
 <style>
   .item {
-    width: 11.5rem;
+    width: 49%;
     display: inline-block;
     font-size: 0.73rem;
     overflow: hidden;
@@ -92,7 +92,7 @@
     height: .76rem;
     display: inline-block;
     content: '';
-    background-image: url("../../assets/Home/room-uer.png");
+    background-image: url("../../../assets/Home/room-uer.png");
     background-size: 100% 100%;
     position: absolute;
     left: 0.5rem;
@@ -121,7 +121,7 @@
     width: .8rem;
     height: .75rem;
     content: '';
-    background-image: url("../../assets/Home/watch.png");
+    background-image: url("../../../assets/Home/watch.png");
     background-size: 100% 100%;
     margin:auto 0;
     position: absolute;

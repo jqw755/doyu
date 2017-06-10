@@ -24,7 +24,7 @@
         let succeClaaB = (res) => {
           if (res.data.error === 0) {
             self.data = res.body.data;
-            console.log(res)
+//            console.log(res)
           }
         };
         let errorCallB = (res) => {

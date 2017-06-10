@@ -1,57 +1,42 @@
 <template>
   <div class="container">
-    <div class="live_item">
-      <live_item :rooms="data.data"></live_item>
-    </div>
-
+    <live_item></live_item>
+    <face_score></face_score>
+    <king_glory></king_glory>
+    <star_show></star_show>
+    <science></science>
+    <copy></copy>
   </div>
 </template>
 
 <script>
-  import live_item from './LiveItem'
-  import img_item from './ImgItem'
+  import live_item from './Now/LiveItem'
+  import face_score from './FaceScore/FaceItem'
+  import king_glory from './KingGlory/KingGlory'
+  import star_show from './StarShow/StarShow'
+  import science from './Science/Science'
+  import copy from '../Other/copyright'
 
   export default {
     data() {
-      return {
-        data: {},
-        limit: 0,
-      }
+      return {}
     },
     components: {
       live_item,
-      img_item
-    },
-    methods: {
-      getIndexLive(){
-        const self = this;
-        self.limit = self.limit + 20;
-        if (self.limit > 100) {
-          return false
-        }
-        let successCallback = (res) => {
-          if (res.data.error === 0) {
-            self.data = res.data;
-          }
-        }
-        let errorCallback = (res) => {
-          console.log(res)
-        }
-        self.$http.get('/api/live?limit=' + self.limit).then(successCallback, errorCallback)
-      },
-    },
-    mounted(){
-      this.getIndexLive();
+      face_score,
+      king_glory,
+      star_show,
+      science,
+      copy
     },
   }
 </script>
 
 <style>
-.container{
-  width: 100%;
-  height: 100%;
-  margin-bottom:2rem;
-  margin-top: 3rem;
-}
+  .container {
+    width: 100%;
+    height: 100%;
+    margin-top: 3rem;
+  }
 
 </style>
