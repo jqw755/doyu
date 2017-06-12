@@ -32,7 +32,7 @@
         scrollTop: ''
       }
     },
-    methods:{
+    methods: {
       afterOpen(){
         this.scrollTop = document.scrollingElement.scrollTop;
         document.body.classList.add('modal-open');
@@ -45,22 +45,19 @@
       }
     },
     mounted(){
-      const userName = sessionStorage.getItem('account'),
-        oBody = document.body || document.getElementsByTagName("body");
+      const userName = sessionStorage.getItem('account');
       if (userName !== '') {
         this.title = userName;
       }
 
       bus.$on('showClassify', (msg) => {
         this.show = msg;
-//        oBody.className = 'modal-open';
         this.afterOpen();
 //        console.log(1)
       });
       bus.$on('hideClassify', (msg) => {
-        this.show = msg;
         this.beforeClose();
-//        oBody.className = '';
+        this.show = msg;
 //        console.log(0)
       });
     },
