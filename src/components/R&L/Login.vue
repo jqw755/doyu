@@ -2,10 +2,10 @@
   <div class="L_container">
     <div v-if="is_account">
       <div class="account">
-        <span>账户名：</span><input type="text" placeholder="请输入账户名" id="account">
+        <input type="text" placeholder="请输入账户名" id="account">
       </div>
       <div class="pwd">
-        <span>密码：</span><input type="password" placeholder="请输入密码" id="pwd">
+        <input type="password" placeholder="请输入密码" id="pwd">
       </div>
       <div class="submit_btn">
         <button class="btn" @click="login">立即登陆</button>
@@ -82,7 +82,6 @@
 
 <style>
   .L_container {
-    margin-top: 3rem;
     font-size: 0.9rem;
   }
 

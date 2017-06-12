@@ -1,5 +1,7 @@
 <template>
   <div class="container">
+    <head_nav :title="title"></head_nav>
+    <classify :class="{showClassify:show}"></classify>
     <banner></banner>
     <live_item></live_item>
     <face_score></face_score>
@@ -11,8 +13,11 @@
 </template>
 
 <script>
+  import {bus} from '../../utils/bus'
+  import head_nav from '../Other/HeadNav'
   import banner from './Banner/Banner'
   import live_item from './Now/LiveItem'
+  import classify from '../Classify/Game'
   import face_score from './FaceScore/FaceItem'
   import king_glory from './KingGlory/KingGlory'
   import star_show from './StarShow/StarShow'
@@ -21,9 +26,47 @@
 
   export default {
     data() {
-      return {}
+      return {
+        title: '',
+        show: false,
+        scrollTop: ''
+      }
+    },
+    methods:{
+      afterOpen(){
+        this.scrollTop = document.scrollingElement.scrollTop;
+        document.body.classList.add('modal-open');
+        document.body.style.top = -(this.scrollTop) + 'px';
+      },
+      beforeClose(){
+        document.body.classList.remove('modal-open');
+        // scrollTop lost after set position:fixed, restore it back.
+        document.scrollingElement.scrollTop = this.scrollTop;
+      }
+    },
+    mounted(){
+      const userName = sessionStorage.getItem('account'),
+        oBody = document.body || document.getElementsByTagName("body");
+      if (userName !== '') {
+        this.title = userName;
+      }
+
+      bus.$on('showClassify', (msg) => {
+        this.show = msg;
+//        oBody.className = 'modal-open';
+        this.afterOpen();
+//        console.log(1)
+      });
+      bus.$on('hideClassify', (msg) => {
+        this.show = msg;
+        this.beforeClose();
+//        oBody.className = '';
+//        console.log(0)
+      });
     },
     components: {
+      head_nav,
+      classify,
       banner,
       live_item,
       face_score,
@@ -36,10 +79,7 @@
 </script>
 
 <style>
-  .container {
-    width: 100%;
-    height: 100%;
-    margin-top: 3rem;
+  .showClassify {
+    display: block !important;
   }
-
 </style>

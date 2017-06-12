@@ -1,46 +1,27 @@
 <template>
   <div id="app">
-    <head_nav :title="title"></head_nav>
-    <silder :class="{'showSilser':show}"></silder>
-    <router-view></router-view>
     <loading v-show="loading"></loading>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-  import {bus} from './utils/bus'
-  import head_nav from './components/Other/HeadNav'
-  import silder from './components/Other/Silder'
   import loading from './components/Loading/Loading'
   export default {
     data() {
       return {
         user: '',
         show: false,
-        title: '',
         loading: false,
       }
     },
     components: {
-      head_nav,
-      silder,
       loading,
     },
     beforeCreate(){
       this.loading = true;
     },
-    mounted() {
-      const userName = sessionStorage.getItem('account');
-      if (userName !== '') {
-        this.title = userName;
-      }
-      bus.$on('showNav', (msg) => {
-        this.show = msg;
-      });
-      bus.$on('hideNav', (msg) => {
-        this.show = msg;
-      });
-    },
+    mounted() {},
     created(){
       this.loading = false;
     },
@@ -67,6 +48,7 @@
   }
 
   #app {
+    width: 100%;
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     /*font-family: Verdana, Geneva, sans-serif;*/
     -webkit-font-smoothing: antialiased;
@@ -77,10 +59,5 @@
     list-style: none;
     width: 100%;
     display: inline-block;
-  }
-
-  .showSilser {
-    transform: translate(0, 0) !important;
-    -webkit-transform: translate(0, 0) !important;
   }
 </style>

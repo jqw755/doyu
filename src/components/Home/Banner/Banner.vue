@@ -50,10 +50,6 @@
   }
 </script>
 <style>
-  .banner_conainer {
-    margin-top: 3rem;
-  }
-
   .slide img {
     width: 100%;
     height: 100%;

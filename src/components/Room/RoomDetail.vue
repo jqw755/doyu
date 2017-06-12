@@ -32,6 +32,7 @@
 
     <section class="foot">
       <img src="../../assets/Room/develop.jpg" class="developing">
+      <p v-show="false">雪梨baby呀</p>
       <p>嘤嘤嘤~待开发...</p>
     </section>
   </div>
@@ -76,7 +77,6 @@
   }
 
   .head {
-    margin-top: 3rem;
     width: 100%;
   }
 
