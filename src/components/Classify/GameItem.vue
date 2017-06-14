@@ -83,7 +83,7 @@
 
   .classify a {
     display: inline-block;
-    width: 33.05%;
+    width: 33.0%;
     height: 7rem;
     text-align: center;
     border-right: 1px dashed #ddd;
@@ -91,8 +91,8 @@
   }
 
   .game_icon {
-    width: 3.3rem;
-    height: 3.3rem;
+    width: 3.7rem;
+    height: 3.7rem;
     border-radius: 50%;
     vertical-align: middle;
     margin-top: 1rem;

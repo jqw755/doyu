@@ -61,6 +61,14 @@
 //        console.log(0)
       });
     },
+    watch: {
+//      '$route' (to) {
+//        alert(to.path);
+//        if (to.path !== '/home' || to.path !== '/') {
+//          alert(1)
+//        }
+//      }
+    },
     components: {
       head_nav,
       classify,

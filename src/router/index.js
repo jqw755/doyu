@@ -23,7 +23,10 @@ export default new Router({
     },
     {
       path: '/room/:id',
-      component: Room
+      component: Room,
+      meta: {
+        keepAlive: false
+      }
     },
     {
       path: '/game',
@@ -35,19 +38,31 @@ export default new Router({
     },
     {
       path: '/classifyDetail',
-      component: ClassifyDetail
+      component: ClassifyDetail,
+      meta: {
+        keepAlive: false
+      }
     },
     {
       path: '/all',
-      component: All
+      component: All,
+      meta: {
+        keepAlive: false
+      }
     },
     {
       path: '/login',
-      component: Login
+      component: Login,
+      meta: {
+        keepAlive: false
+      }
     },
     {
       path: '*',
-      component: Home
+      component: Home,
+      meta: {
+        keepAlive: true
+      }
     },
 
   ]

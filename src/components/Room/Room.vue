@@ -1,9 +1,13 @@
 <template>
-  <roomDetail :roomInfo="data"></roomDetail>
+  <div>
+    <headNav2></headNav2>
+    <roomDetail :roomInfo="data"></roomDetail>
+  </div>
 </template>
 
 <script>
   import roomDetail from './RoomDetail'
+  import headNav2 from '../Other/HeadNav2'
   export default{
     data(){
       return {
@@ -12,6 +16,7 @@
     },
     components:{
       roomDetail,
+      headNav2,
     },
     methods: {
       getId(params){
@@ -33,11 +38,11 @@
       }
     },
     mounted() {
+//    从HOME进入前清除body上的model-open
+      document.body.classList.remove('modal-open');
+      document.scrollingElement.scrollTop = 0;
+
       this.getRoomDetail();
     }
   }
 </script>
-
-<style>
-
-</style>

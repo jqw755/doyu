@@ -52,7 +52,7 @@
 
   .room_src {
     width: 100%;
-    height: 6.2rem;
+    height: 7rem;
     -webkit-border-radius: 0.3rem;
     border-radius: 0.3rem;
     position: relative;
@@ -73,7 +73,7 @@
 
   .room-nickname {
     position: absolute;
-    left: 0%;
+    left: 0;
     bottom: 0rem;
     width: 100%;
     height: 1.4rem;

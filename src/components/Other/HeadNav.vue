@@ -2,7 +2,9 @@
   <div>
     <div class="header">
       <div class="title">
-        <h4>LIVE</h4>
+          <router-link to="/">
+            <img src="../../assets/Home/logo.png" class="logo">
+          </router-link>
       </div>
       <div class="classify_menu" @click="showClassify">分类</div>
       <div class="title_span">
@@ -22,19 +24,19 @@
   import {bus} from '../../utils/bus'
   export default {
     props: {
-      title: ''
+      title: '',
     },
     data() {
       return {
         show: true,
-        flag:0,
+        flag: 0,
       }
     },
     methods: {
       showClassify () {
 //        const self = this;
 //        if (self.flag === 0) {
-          bus.$emit('showClassify', true);
+        bus.$emit('showClassify', true);
 //          self.flag = 1;
 //        }else{
 //          bus.$emit('hideClassify', false);
@@ -42,9 +44,6 @@
 //        }
       }
     },
-    mounted(){
-
-    }
   }
 </script>
 
@@ -90,6 +89,11 @@
     padding-left: 1rem;
   }
 
+  .title .logo{
+    width:40%;
+    margin-top:2.5%;
+  }
+
   .title_span {
     width: 70px;
     height: 3rem;
@@ -109,6 +113,7 @@
 
   .logined {
     height: 100%;
+    color: #999;
   }
 
   .logined i {
