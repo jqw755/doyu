@@ -52,7 +52,7 @@
 
   .room_src {
     width: 100%;
-    height: 7rem;
+    height: 8rem;
     -webkit-border-radius: 0.3rem;
     border-radius: 0.3rem;
     position: relative;
@@ -61,6 +61,7 @@
 
   .room_src img {
     width: 100%;
+    vertical-align: middle;
   }
 
   .room_info {
@@ -74,12 +75,13 @@
   .room-nickname {
     position: absolute;
     left: 0;
-    bottom: 0rem;
+    bottom: 0.3rem;
     width: 100%;
     height: 1.4rem;
-    line-height: 1.4rem;
-    background: -webkit-linear-gradient(to top, rgba(0, 0, 0, .7), rgba(0, 0, 0, .1));
-    background: linear-gradient(to top, rgba(0, 0, 0, .7), rgba(0, 0, 0, .1));
+    line-height: 1.6rem;
+    background: rgba(0, 0, 0, 0.2);
+    /*background: -webkit-linear-gradient(to top, rgba(0, 0, 0, .7), rgba(0, 0, 0, .1));*/
+    /*background: linear-gradient(to top, rgba(0, 0, 0, .7), rgba(0, 0, 0, .1));*/
     color: #fff;
     padding-left: 12%;
     overflow: hidden;
@@ -108,7 +110,7 @@
     left: 0%;
     top: 0%;
     color: #fff;
-    background: rgba(0, 0, 0, 0.2)
+    background: rgba(0, 0, 0, 0.2);
   }
 
   .online-span{

@@ -4,7 +4,7 @@
     <p>doyu客服热线：027-6502xxxx</p>
     <p>doyu网络科技有限公司</p>
     <p>xx省xx市xxxx区doyu软件园xxxx</p>
-    <p>版权所有 © www.doyu.com 鄂ICP备150xxxxxx号-1</p>
+    <p>版权所有 © www.doyu.cc 鄂ICP备150xxxxxx号-1</p>
   </div>
 </template>
 
@@ -25,7 +25,7 @@
   .copy_container p {
     color: #999;
     text-align: center;
-    font-size: .3rem;
+    font-size: .8rem;
   }
 
 

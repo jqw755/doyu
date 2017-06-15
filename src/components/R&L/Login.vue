@@ -1,5 +1,6 @@
 <template>
   <div class="L_container">
+    <head_nav></head_nav>
     <div v-if="is_account">
       <div class="account">
         <input type="text" placeholder="请输入账户名" id="account">
@@ -23,6 +24,7 @@
 </template>
 
 <script>
+  import head_nav from '../Other/HeadNav2'
   export default{
     data(){
       return {
@@ -76,7 +78,8 @@
         }else{
           this.is_account = true;
         }
-    }
+    },
+    components:{head_nav}
   }
 </script>
 

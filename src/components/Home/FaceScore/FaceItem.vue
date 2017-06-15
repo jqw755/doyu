@@ -50,8 +50,3 @@
   }
 </script>
 
-<style>
- .face_container .room_src{
-   height:7rem;
- }
-</style>
