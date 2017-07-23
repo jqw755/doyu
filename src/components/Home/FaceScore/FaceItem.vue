@@ -18,7 +18,7 @@
         limit: 0,
         info: {
           src1: yz,
-          name: '颜值',
+          name: '颜值1111',
           more: '更多',
           src2: more,
           link:'yz'
