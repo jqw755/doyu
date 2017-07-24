@@ -32,7 +32,7 @@
     methods: {
       getIndexLive(){
         const self = this;
-        self.limit = self.limit + 6;
+        self.limit = self.limit + 4;
         let success = (res) => {
           if (res.data.error === 0) {
             self.rooms = res.body.data;
